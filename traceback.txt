@@ -1,0 +1,30 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/fight.rpy", line 128, in script
+    menu:
+SyntaxError: unexpected EOF while parsing (game/fight.rpy, line 130)
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/fight.rpy", line 128, in script
+    menu:
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\ast.py", line 1619, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\exports\menuexports.py", line 100, in menu
+    condition = renpy.python.py_eval(condition)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\python.py", line 1207, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\python.py", line 1144, in py_compile
+    raise e
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\python.py", line 1081, in py_compile
+    raise orig_e
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\python.py", line 1073, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: unexpected EOF while parsing (game/fight.rpy, line 130)
+
+Windows-10-10.0.19045 AMD64
+Ren'Py 8.3.2.24090902
+IvanHistory 1.0
+Sat Sep 28 00:32:35 2024
