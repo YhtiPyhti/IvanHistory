@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/fight.rpy", line 42: expected statement.
-    ??? "Человеко подобное существо с заостренными ушами и низким ростиком зачем то начало снимать свой левый башмачек."
-    ^
+File "game/forest.rpy", line 110: else clause expects a non-empty block.
+    else:
+         ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Fri Sep 27 00:38:55 2024
+Sun Sep 29 02:46:24 2024
