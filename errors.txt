@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/forest.rpy", line 110: else clause expects a non-empty block.
-    else:
-         ^
+The label start is defined twice, at File "game/images/bg/script.rpy", line 25:
+label start:
+and File "game/script.rpy", line 25:
+label start:
+
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Sun Sep 29 02:46:24 2024
+Sun Sep 29 22:47:28 2024
