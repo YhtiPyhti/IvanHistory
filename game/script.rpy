@@ -24,6 +24,8 @@ default isNikitaAlive = True
 # Игра начинается здесь:
 label start:
 
+    jump ocobniak
+
     scene bg avtf
     show ivan
     

@@ -2,11 +2,9 @@
 errors listed below, and try again.
 
 
-The label start is defined twice, at File "game/images/bg/script.rpy", line 25:
-label start:
-and File "game/script.rpy", line 25:
-label start:
-
+File "game/forest.rpy", line 145: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "???" "Допив эль, ребята продолжили дежурить в полном молчании и лишь изредка обсуждая душные факты из жизни лягушек."
+    ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Sun Sep 29 22:47:28 2024
+Mon Sep 30 03:00:02 2024

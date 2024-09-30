@@ -1,28 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/forest.rpy", line 11, in script
-    if $alinaIsAlive == False and $arinaIsAlive = False:
-SyntaxError: invalid syntax (game/forest.rpy, line 11)
+  File "game/ocobniak.rpy", line 54, in script
+    scene bg lec osobnak hole:
+Exception: Image 'bg lec osobnak' does not accept attributes 'hole'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/forest.rpy", line 11, in script
-    if $alinaIsAlive == False and $arinaIsAlive = False:
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\ast.py", line 1843, in execute
-    if renpy.python.py_eval(condition):
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\python.py", line 1207, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\python.py", line 1144, in py_compile
-    raise e
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\python.py", line 1081, in py_compile
-    raise orig_e
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\python.py", line 1073, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/forest.rpy, line 11)
+  File "game/ocobniak.rpy", line 54, in script
+    scene bg lec osobnak hole:
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\ast.py", line 1245, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\ast.py", line 1074, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\exports\displayexports.py", line 477, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\displayable.py", line 249, in _duplicate
+    args.extraneous()
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'bg lec osobnak' does not accept attributes 'hole'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 IvanHistory 1.0
-Sat Sep 28 23:09:53 2024
+Mon Sep 30 20:55:01 2024
