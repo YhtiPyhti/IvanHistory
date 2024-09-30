@@ -207,11 +207,15 @@ style input:
 
 screen choice(items):
     style_prefix "choice"
-
+    if Timer_Enable:
+        use timerz
     vbox:
         for i in items:
             textbutton i.caption action i.action
 
+screen timerz:
+    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
+    bar value timez range time_range xalign .5 xmaximum 500
 
 style choice_vbox is vbox
 style choice_button is button

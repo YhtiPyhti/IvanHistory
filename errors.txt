@@ -2,9 +2,33 @@
 errors listed below, and try again.
 
 
-File "game/forest.rpy", line 145: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    "???" "Допив эль, ребята продолжили дежурить в полном молчании и лишь изредка обсуждая душные факты из жизни лягушек."
-    ^
+File "game/ocobniak.rpy", line 173: choice menuitem expects a non-empty block.
+    "Надежда Морская Пехота":
+                             ^
+
+File "game/ocobniak.rpy", line 180: choice menuitem expects a non-empty block.
+    "36 км/ч":
+              ^
+
+File "game/ocobniak.rpy", line 185: choice menuitem expects a non-empty block.
+    "76":
+         ^
+
+File "game/ocobniak.rpy", line 194: choice menuitem expects a non-empty block.
+    "TCP-соединение":
+                     ^
+
+File "game/ocobniak.rpy", line 201: choice menuitem expects a non-empty block.
+    "Нет":
+          ^
+
+File "game/ocobniak.rpy", line 208: choice menuitem expects a non-empty block.
+    "4":
+        ^
+
+File "game/ocobniak.rpy", line 213: choice menuitem expects a non-empty block.
+    "На хромой блохе":
+                      ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Mon Sep 30 03:00:02 2024
+Tue Oct  1 00:18:00 2024

@@ -1,30 +1,80 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/ocobniak.rpy", line 54, in script
-    scene bg lec osobnak hole:
-Exception: Image 'bg lec osobnak' does not accept attributes 'hole'.
+  File "game/ocobniak.rpy", line 37, in script
+    menu:
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 210, in execute
+    if Timer_Enable:
+  File "game/screens.rpy", line 211, in execute
+    use timerz
+  File "game/screens.rpy", line 216, in execute
+    screen timerz:
+  File "game/screens.rpy", line 216, in execute
+    screen timerz:
+  File "game/screens.rpy", line 217, in execute
+    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
+  File "game/screens.rpy", line 217, in keywords
+    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
+  File "game/screens.rpy", line 217, in <module>
+    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
+NameError: name 'timez' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/ocobniak.rpy", line 54, in script
-    scene bg lec osobnak hole:
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\ast.py", line 1245, in execute
-    show_imspec(self.imspec, atl=getattr(self, "atl", None))
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\ast.py", line 1074, in show_imspec
-    renpy.config.show(name,
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\exports\displayexports.py", line 477, in show
-    if not base.find_target() and renpy.config.missing_show:
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\image.py", line 421, in find_target
-    self.target = target._duplicate(a)
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\displayable.py", line 249, in _duplicate
-    args.extraneous()
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\displayable.py", line 109, in extraneous
-    raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'bg lec osobnak' does not accept attributes 'hole'.
+  File "game/ocobniak.rpy", line 37, in script
+    menu:
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\ast.py", line 1619, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\exports\menuexports.py", line 134, in menu
+    rv = renpy.store.menu(new_items)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\exports\menuexports.py", line 424, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 210, in execute
+    if Timer_Enable:
+  File "game/screens.rpy", line 211, in execute
+    use timerz
+  File "game/screens.rpy", line 216, in execute
+    screen timerz:
+  File "game/screens.rpy", line 216, in execute
+    screen timerz:
+  File "game/screens.rpy", line 217, in execute
+    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
+  File "game/screens.rpy", line 217, in keywords
+    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
+  File "game/screens.rpy", line 217, in <module>
+    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
+NameError: name 'timez' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 IvanHistory 1.0
-Mon Sep 30 20:55:01 2024
+Mon Sep 30 23:27:41 2024
