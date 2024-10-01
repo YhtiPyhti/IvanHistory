@@ -6,6 +6,25 @@
 ## другими файлами, из-за чего инициализация здесь запускается первее.
 init offset = -2
 
+image menu_slideshow:
+    "gui/bg menu1.jpg" with fade
+    pause 3.0
+    "gui/bg menu2.png" with fade
+    pause 3.0
+    "gui/bg menu3.jpg" with dissolve
+    pause 3.0
+    "gui/bg menu 4.png"with fade
+    pause 3.0
+    "gui/bg menu5.jpg" with fade
+    pause 3.0
+    "gui/bg menu6.jpg" with dissolve
+    pause 3.0
+    "gui/bg menu7.jpg" with dissolve
+    pause 3.0
+    "gui/bg menu8.jpg" with fade
+    pause 3.0
+    repeat
+
 ## Вызываю gui.init, чтобы сбросить стили, чувствительные к стандартным
 ## значениям, и задать высоту и ширину окна игры.
 init python:

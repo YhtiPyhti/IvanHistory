@@ -1,39 +1,47 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/ocobniak.rpy", line 37, in script
-    menu:
-  File "game/screens.rpy", line 208, in execute
-    screen choice(items):
-  File "game/screens.rpy", line 208, in execute
-    screen choice(items):
-  File "game/screens.rpy", line 210, in execute
-    if Timer_Enable:
-  File "game/screens.rpy", line 211, in execute
-    use timerz
-  File "game/screens.rpy", line 216, in execute
-    screen timerz:
-  File "game/screens.rpy", line 216, in execute
-    screen timerz:
-  File "game/screens.rpy", line 217, in execute
-    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
-  File "game/screens.rpy", line 217, in keywords
-    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
-  File "game/screens.rpy", line 217, in <module>
-    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
-NameError: name 'timez' is not defined
+  File "game/labirint.rpy", line 150, in script call
+    call test_loop
+  File "game/labirint.rpy", line 43, in script
+    call screen question_screen # вызываем экран, в котором будет отображён текст вопроса и варианты ответа
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/labirint.rpy", line 21, in execute
+    screen question_screen:
+  File "game/labirint.rpy", line 21, in execute
+    screen question_screen:
+  File "game/labirint.rpy", line 22, in execute
+    frame:
+  File "game/labirint.rpy", line 27, in execute
+    vbox:
+  File "game/labirint.rpy", line 30, in execute
+    grid 2 2:
+  File "game/labirint.rpy", line 33, in execute
+    for i, variant in enumerate(question.variants):
+  File "game/labirint.rpy", line 34, in execute
+    textbutton "%s. %s" % (__(variant_prefixes[i]), __(variant)) action Return(i)
+  File "game/labirint.rpy", line 34, in <module>
+    textbutton "%s. %s" % (__(variant_prefixes[i]), __(variant)) action Return(i)
+NameError: name 'variant_prefixes' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/ocobniak.rpy", line 37, in script
-    menu:
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\ast.py", line 1619, in execute
-    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\exports\menuexports.py", line 134, in menu
-    rv = renpy.store.menu(new_items)
-  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\exports\menuexports.py", line 424, in display_menu
-    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "game/labirint.rpy", line 150, in script call
+    call test_loop
+  File "game/labirint.rpy", line 43, in script
+    call screen question_screen # вызываем экран, в котором будет отображён текст вопроса и варианты ответа
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\ast.py", line 1974, in execute
+    self.call("execute")
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
   File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
@@ -54,27 +62,25 @@ Full traceback:
     self.update()
   File "C:\Users\serge\OneDrive\Рабочий стол\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
     self.screen.function(**self.scope)
-  File "game/screens.rpy", line 208, in execute
-    screen choice(items):
-  File "game/screens.rpy", line 208, in execute
-    screen choice(items):
-  File "game/screens.rpy", line 210, in execute
-    if Timer_Enable:
-  File "game/screens.rpy", line 211, in execute
-    use timerz
-  File "game/screens.rpy", line 216, in execute
-    screen timerz:
-  File "game/screens.rpy", line 216, in execute
-    screen timerz:
-  File "game/screens.rpy", line 217, in execute
-    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
-  File "game/screens.rpy", line 217, in keywords
-    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
-  File "game/screens.rpy", line 217, in <module>
-    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
-NameError: name 'timez' is not defined
+  File "game/labirint.rpy", line 21, in execute
+    screen question_screen:
+  File "game/labirint.rpy", line 21, in execute
+    screen question_screen:
+  File "game/labirint.rpy", line 22, in execute
+    frame:
+  File "game/labirint.rpy", line 27, in execute
+    vbox:
+  File "game/labirint.rpy", line 30, in execute
+    grid 2 2:
+  File "game/labirint.rpy", line 33, in execute
+    for i, variant in enumerate(question.variants):
+  File "game/labirint.rpy", line 34, in execute
+    textbutton "%s. %s" % (__(variant_prefixes[i]), __(variant)) action Return(i)
+  File "game/labirint.rpy", line 34, in <module>
+    textbutton "%s. %s" % (__(variant_prefixes[i]), __(variant)) action Return(i)
+NameError: name 'variant_prefixes' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.3.2.24090902
 IvanHistory 1.0
-Mon Sep 30 23:27:41 2024
+Wed Oct  2 02:25:32 2024

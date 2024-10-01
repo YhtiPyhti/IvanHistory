@@ -2,33 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/ocobniak.rpy", line 173: choice menuitem expects a non-empty block.
-    "Надежда Морская Пехота":
-                             ^
+File "game/labirint.rpy", line 70: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    yalign 0.3
+    ^
 
-File "game/ocobniak.rpy", line 180: choice menuitem expects a non-empty block.
-    "36 км/ч":
-              ^
-
-File "game/ocobniak.rpy", line 185: choice menuitem expects a non-empty block.
-    "76":
-         ^
-
-File "game/ocobniak.rpy", line 194: choice menuitem expects a non-empty block.
-    "TCP-соединение":
-                     ^
-
-File "game/ocobniak.rpy", line 201: choice menuitem expects a non-empty block.
-    "Нет":
-          ^
-
-File "game/ocobniak.rpy", line 208: choice menuitem expects a non-empty block.
-    "4":
-        ^
-
-File "game/ocobniak.rpy", line 213: choice menuitem expects a non-empty block.
-    "На хромой блохе":
-                      ^
+File "game/labirint.rpy", line 79: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    yalign 0.3
+    ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Tue Oct  1 00:18:00 2024
+Wed Oct  2 03:56:36 2024

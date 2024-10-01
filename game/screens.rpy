@@ -204,18 +204,21 @@ style input:
 ## каждый с заголовком и полями действия.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
+screen timerz:
+    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
+    bar value timez range time_range xalign .5 xmaximum 500
 
 screen choice(items):
+
+    #if Timer_Enable:
+    #    use timerz
+
     style_prefix "choice"
-    if Timer_Enable:
-        use timerz
+
     vbox:
         for i in items:
             textbutton i.caption action i.action
 
-screen timerz:
-    timer 0.05 repeat True action If(timez>0, SetVariable("timez", timez-1), Jump(marker))
-    bar value timez range time_range xalign .5 xmaximum 500
 
 style choice_vbox is vbox
 style choice_button is button
@@ -301,17 +304,17 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Начать") action Start()
+            textbutton _("{color=3366cc}{font=ofont.ru_InkVerse.ttf}Начать{/font}{/color}") action Start()
 
         else:
 
-            textbutton _("История") action ShowMenu("history")
+            textbutton _("{color=3366cc}{font=ofont.ru_InkVerse.ttf}История{/font}{/color}") action ShowMenu("history")
 
-            textbutton _("Сохранить") action ShowMenu("save")
+            textbutton _("{color=3366cc}{font=ofont.ru_InkVerse.ttf}Сохранить{/font}{/color}") action ShowMenu("save")
 
-        textbutton _("Загрузить") action ShowMenu("load")
+        textbutton _("{color=3366cc}{font=ofont.ru_InkVerse.ttf}Загрузить{/font}{/color}") action ShowMenu("load")
 
-        textbutton _("Настройки") action ShowMenu("preferences")
+        textbutton _("{color=3366cc}{font=ofont.ru_InkVerse.ttf}Настройки{/font}{/color}") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -319,20 +322,20 @@ screen navigation():
 
         elif not main_menu:
 
-            textbutton _("Главное меню") action MainMenu()
+            textbutton _("{color=3366cc}{font=ofont.ru_InkVerse.ttf}Главное меню{/font}{/color}") action MainMenu()
 
-        textbutton _("Об игре") action ShowMenu("about")
+        textbutton _("{color=3366cc}{font=ofont.ru_InkVerse.ttf}Об игре{/font}{/color}") action ShowMenu("about")
 
         if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
             ## Помощь не необходима и не относится к мобильным устройствам.
-            textbutton _("Помощь") action ShowMenu("help")
+            textbutton _("{color=3366cc}{font=ofont.ru_InkVerse.ttf}Помощь{/font}{/color}") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## Кнопка выхода блокирована в iOS и не нужна на Android и в веб-
             ## версии.
-            textbutton _("Выход") action Quit(confirm=not main_menu)
+            textbutton _("{color=3366cc}{font=ofont.ru_InkVerse.ttf}Выход{/font}{/color}") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -351,16 +354,22 @@ style navigation_button_text:
 ## Используется, чтобы показать главное меню после запуска игры.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
-
 screen main_menu():
 
     ## Этот тег гарантирует, что любой другой экран с тем же тегом будет
     ## заменять этот.
     tag menu
+    
+    imagemap:
+        alpha False
+        ground "menu_slideshow"
 
-    add gui.main_menu_background
+    add "gui/bg logo.png":
+        zoom 0.3
+        xalign 1.0
+    #add gui.main_menu_background
 
-    ## Эта пустая рамка затеняет главное меню.
+    # Эта пустая рамка затеняет главное меню.
     frame:
         style "main_menu_frame"
 
@@ -373,10 +382,10 @@ screen main_menu():
         vbox:
             style "main_menu_vbox"
 
-            text "[config.name!t]":
+            text "IVAN and DIVAN":
                 style "main_menu_title"
 
-            text "[config.version]":
+            text "alpha beta 0.00001":
                 style "main_menu_version"
 
 
