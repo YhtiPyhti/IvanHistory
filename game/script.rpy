@@ -13,7 +13,7 @@ define nikita = Character('Слиппи', color="#0bd80b")
 define roma = Character('Эриван', color="#b48e05")
 define sergei = Character('Дьяволо', color="#b41405")
 
-define historyman = Character('Рассказчик', color="#f3f8f3") # Sergei
+define historyman = Character('Рассказчик', color="#f3f8f3")
 define bomj = Character('Бомж-Серега', color="#145a0a") # Бомж
 
 # Переменные выбора
