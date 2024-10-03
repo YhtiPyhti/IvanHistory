@@ -18,17 +18,14 @@ define bomj = Character('Бомж-Серега', color="#145a0a") # Бомж
 
 # Переменные выбора
 default isByingBomj = False
-default isSaveNikita = False
 default isNikitaAlive = True
 
 # Игра начинается здесь:
 label start:
-     
-    jump dver
-
+    jump hospital
     scene bg avtf
     show ivan
-    
+    play music "prolog.mp3" fadein 1
     ivan "{b}Как же заебала эта ебатория{/b}"
 
     historyman "{i}Это наш главный герой Иван. И да, у этого бедняги сегодня было пять пар"
@@ -37,7 +34,7 @@ label start:
 
     scene bg hostel with fade
     
-    play music "trevoga.mp3"
+    play music "trevoga.mp3" fadein 1
     
     show ivan at left
     show fireman:
@@ -46,7 +43,7 @@ label start:
 
     ivan "Да ёлки палки! Пожарки еще не хватало.{w} Ладно, пойду в магаз.{w} Надеюсь они скоро уедут"
 
-    stop music
+    play music "prolog.mp3" fadein 1
 
     scene bg magnit with fade
     show bomj at right
@@ -100,18 +97,18 @@ label start:
             "Конечно! Он мне еще 5 рублей должен":
                 play sound "car_crash.mp3"
                 ivan "СТООООООООЙ"
-                historyman "{i}Иван оттолкнул Никиту, и встал на его место.{w} Грузовик-сан, не справившись с управлением, сбивает нашего героя, тем самым начиная нашу исторую" with hpunch               
+                historyman "{i}Иван оттолкнул Никиту, и встал на его место.{w} Грузовик-сан, не справившись с управлением, сбивает нашего героя, тем самым начиная нашу историю" with hpunch               
                 jump fight
             "Да пошел он!":
                 play sound "car_crash.mp3"
                 historyman "{i}На глазах у нашего героя сбивают Никиту, но Ивану нет никакого дела до этого.{w} Он слишком устал на парах" with hpunch
                 $isNikitaAlive = False
     
-    ivan "Пора возвращатся в общежитие"
+    ivan "Пора возвращаться в общежитие"
     hide nikita walk
     hide car
     show bg hostel with fade      
-    historyman "{i}Подходя к общежитию герой увидел, что пожарная тревого закончилась, и спокойно пошел в свою комнату..."
+    historyman "{i}Подходя к общежитию герой увидел, что пожарная тревога закончилась, и спокойно пошел в свою комнату..."
     hide ivan
     show bg room with fade
     show ivan:
@@ -131,7 +128,7 @@ label start:
         ivan "И что это за хрень?"
         ivan "Понюхаю её хоть что-ли"
         play sound "bottle_cap.mp3"
-        historyman "{i}Не долго думая, Иван открывает этот бутылек, и пытается принюхаться..."
+        historyman "{i}Недолго думая, Иван открывает этот бутылек, и пытается принюхаться..."
         play sound "snip.mp3"
         historyman "{i}{b}!!!РОКОВАЯ ОШИБКА!!!"
         historyman "{i}Герой начинает терять сознание и тут начинается наша история"

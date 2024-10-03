@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/labirint.rpy", line 70: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    yalign 0.3
-    ^
-
-File "game/labirint.rpy", line 79: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    yalign 0.3
+File "game/script.rpy", line 26: Line is indented, but the preceding jump statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    scene bg avtf
     ^
 
 Ren'Py Version: Ren'Py 8.3.2.24090902
-Wed Oct  2 03:56:36 2024
+Wed Oct  2 19:38:02 2024
